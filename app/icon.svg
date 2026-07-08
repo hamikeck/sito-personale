@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#f4f2ec" stroke="#22201a" stroke-width="4"/>
+  <text x="32" y="44" font-family="ui-monospace, monospace" font-size="34" font-weight="bold" text-anchor="middle" fill="#22201a">m<tspan fill="#e05d38">_</tspan></text>
+</svg>

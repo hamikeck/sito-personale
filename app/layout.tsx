@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+import { siteUrl } from "@/lib/site";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,8 +16,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Michele Cacciapuoti",
-  description: "Spazio personale di Michele Cacciapuoti",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Michele Cacciapuoti — builder & storyteller",
+    template: "%s · Michele Cacciapuoti",
+  },
+  description:
+    "Realizzo siti per attività locali e racconto quello che imparo: progetti, articoli su tech e vita, e il mio percorso.",
 };
 
 export default function RootLayout({
