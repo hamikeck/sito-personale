@@ -1,22 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-export function ThemeToggle() {
-  const [dark, setDark] = useState<boolean | null>(null);
+function sottoscriviTema(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+  return () => observer.disconnect();
+}
 
-  useEffect(() => {
-    setDark(document.documentElement.classList.contains("dark"));
-  }, []);
+export function ThemeToggle() {
+  // Il server non conosce il tema: parte da false e si allinea al DOM dopo l'idratazione.
+  const dark = useSyncExternalStore(
+    sottoscriviTema,
+    () => document.documentElement.classList.contains("dark"),
+    () => false
+  );
 
   function toggle() {
     const next = !document.documentElement.classList.contains("dark");
     document.documentElement.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
-    setDark(next);
   }
 
   return (
@@ -27,13 +36,7 @@ export function ThemeToggle() {
       aria-label={dark ? "Passa al tema chiaro" : "Passa al tema scuro"}
       className="rounded-full border-2 border-foreground shadow-brut-sm"
     >
-      {dark === null ? (
-        <Sun className="opacity-0" />
-      ) : dark ? (
-        <Sun />
-      ) : (
-        <Moon />
-      )}
+      {dark ? <Sun /> : <Moon />}
     </Button>
   );
 }
