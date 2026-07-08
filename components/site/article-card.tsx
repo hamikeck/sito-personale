@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { formattaData, type ArticoloMeta } from "@/lib/articoli";
+import { formattaData, type ArticoloMeta } from "@/lib/articoli-meta";
 
 export function ArticleCard({ articolo }: { articolo: ArticoloMeta }) {
   return (
