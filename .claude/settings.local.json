@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "Bash(rm /Users/michelecacciapuoti/Desktop/sito-personal/package-lock.json)",
+      "Bash(npx --yes create-next-app@latest . --yes)"
+    ]
+  }
+}
