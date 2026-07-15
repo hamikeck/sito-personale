@@ -21,14 +21,14 @@ export function Hero() {
             Ciao, sono Michele 👋
           </h1>
           <p className="font-mono text-lg text-primary sm:text-xl">
-            builder &amp; storyteller
+            A 16 anni creo siti web e racconto le mie passioni e la mia crescita
           </p>
         </div>
       </div>
       <p className="mt-6 max-w-xl text-muted-foreground">
-        Realizzo siti per attività locali e racconto quello che imparo lungo la
-        strada: progetti, esperimenti tech ed esperienze personali. Questo è il
-        mio spazio, e cresce insieme a me.
+        Questo è il diario pubblico del mio percorso: ogni sito che consegno,
+        ogni esperimento, ogni cosa che imparo finisce qui. Se hai
+        un&apos;attività e ti serve un sito, sei nel posto giusto.
       </p>
       <div className="mt-8 flex flex-wrap gap-3">
         <Link
