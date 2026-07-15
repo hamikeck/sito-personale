@@ -40,7 +40,8 @@
       "Bash(awk '{print $5}')",
       "Bash(cp '/Users/michelecacciapuoti/Downloads/IMG_1343.jpg' originale.jpg)",
       "Bash(sips -c 440 440 --cropOffset 10 170 originale.jpg --out ritaglio.jpg)",
-      "Bash(sips -g pixelWidth -g pixelHeight ritaglio.jpg)"
+      "Bash(sips -g pixelWidth -g pixelHeight ritaglio.jpg)",
+      "Bash(python3 *)"
     ]
   }
 }
