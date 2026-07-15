@@ -1,4 +1,5 @@
 import { email, socials } from "@/lib/site";
+import { SocialIcon } from "@/components/site/social-icon";
 
 export function SezioneContatti() {
   return (
@@ -29,8 +30,9 @@ export function SezioneContatti() {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border-2 border-background px-5 py-2 text-sm font-medium transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-background px-5 py-2 text-sm font-medium transition-transform hover:-translate-y-0.5"
             >
+              <SocialIcon icona={social.icona} className="size-4" />
               {social.nome}
             </a>
           ))}

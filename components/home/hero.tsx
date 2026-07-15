@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { buttonVariants } from "@/components/ui/button";
+import { SocialIcon } from "@/components/site/social-icon";
+import { socials } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -49,6 +51,21 @@ export function Hero() {
         >
           Leggi il blog
         </Link>
+      </div>
+      <div className="mt-6 flex flex-wrap items-center gap-3">
+        {socials.map((social) => (
+          <a
+            key={social.url}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.nome}
+            title={social.nome}
+            className="flex size-10 items-center justify-center rounded-full border-2 border-foreground bg-card shadow-brut-sm transition-transform hover:-translate-y-0.5"
+          >
+            <SocialIcon icona={social.icona} className="size-5" />
+          </a>
+        ))}
       </div>
     </section>
   );
