@@ -41,7 +41,16 @@
       "Bash(cp '/Users/michelecacciapuoti/Downloads/IMG_1343.jpg' originale.jpg)",
       "Bash(sips -c 440 440 --cropOffset 10 170 originale.jpg --out ritaglio.jpg)",
       "Bash(sips -g pixelWidth -g pixelHeight ritaglio.jpg)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Bash(sips -g pixelWidth -g pixelHeight '/Users/michelecacciapuoti/Desktop/Screenshot 2026-07-15 at 10.42.53.png')",
+      "WebFetch(domain:pizzeriasalvatore.it)",
+      "Bash(sips -s format jpeg -s formatOptions 80 --resampleWidth 1600 '/Users/michelecacciapuoti/Desktop/Screenshot 2026-07-15 at 10.42.53.png' --out /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/pizzeria-da-salvatore.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/pizzeria-da-salvatore.jpg)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(curl -s -o /dev/null -w \"file statico: %{http_code}\\\\n\" http://localhost:3000/progetti/pizzeria-da-salvatore.jpg)",
+      "Bash(curl -s -o /dev/null -w \"next/image: %{http_code}\\\\n\" \"http://localhost:3000/_next/image?url=%2Fprogetti%2Fpizzeria-da-salvatore.jpg&w=1080&q=75\")",
+      "WebFetch(domain:www.belleepoque1985.com)",
+      "Bash(sips -s format jpeg -s formatOptions 80 --resampleWidth 1600 '/Users/michelecacciapuoti/Desktop/Screenshot 2026-07-15 at 10.52.46.png' --out /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/belle-epoque.jpg)"
     ]
   }
 }
