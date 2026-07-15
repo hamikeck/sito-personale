@@ -23,7 +23,8 @@ il riquadro perché il viso resti riconoscibile.
    - `priority` (è l'elemento LCP della pagina, sopra la piega);
    - stesse classi brut del segnaposto + `object-cover`;
    - dimensioni portate da `size-16 sm:size-20` a `size-20 sm:size-24`
-     (80px mobile / 96px desktop).
+     (80px mobile / 96px desktop); dopo una valutazione visiva insieme,
+     ritoccate a `size-24 sm:size-28` (96px mobile / 112px desktop).
 3. Rimuovere il commento "Sostituire con una foto quando disponibile".
 
 ## Note

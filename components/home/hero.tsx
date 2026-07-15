@@ -16,7 +16,7 @@ export function Hero() {
           width={440}
           height={440}
           preload
-          className="size-20 shrink-0 rounded-2xl border-2 border-foreground object-cover shadow-brut-sm sm:size-24"
+          className="size-24 shrink-0 rounded-2xl border-2 border-foreground object-cover shadow-brut-sm sm:size-28"
         />
         <div>
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
