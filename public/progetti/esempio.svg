@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#f0e8da"/>
-  <rect x="40" y="40" width="720" height="60" rx="12" fill="#e8ddc9"/>
-  <rect x="40" y="130" width="460" height="220" rx="12" fill="#e8ddc9"/>
-  <rect x="530" y="130" width="230" height="220" rx="12" fill="#e05d38" opacity="0.35"/>
-  <rect x="40" y="380" width="720" height="80" rx="12" fill="#e8ddc9"/>
-  <text x="400" y="260" font-family="monospace" font-size="28" fill="#9a8a74" text-anchor="middle">screenshot in arrivo</text>
-</svg>
