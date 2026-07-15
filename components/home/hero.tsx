@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { buttonVariants } from "@/components/ui/button";
@@ -7,8 +8,14 @@ export function Hero() {
   return (
     <section className="mx-auto max-w-4xl px-4 py-16 sm:py-24">
       <div className="flex items-center gap-5">
-        {/* Sostituire con una foto quando disponibile */}
-        <div className="size-16 shrink-0 rounded-2xl border-2 border-foreground bg-gradient-to-br from-secondary to-primary shadow-brut-sm sm:size-20" />
+        <Image
+          src="/michele.jpg"
+          alt="Foto di Michele"
+          width={440}
+          height={440}
+          preload
+          className="size-20 shrink-0 rounded-2xl border-2 border-foreground object-cover shadow-brut-sm sm:size-24"
+        />
         <div>
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
             Ciao, sono Michele 👋
