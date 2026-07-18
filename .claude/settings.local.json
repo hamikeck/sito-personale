@@ -50,7 +50,15 @@
       "Bash(curl -s -o /dev/null -w \"file statico: %{http_code}\\\\n\" http://localhost:3000/progetti/pizzeria-da-salvatore.jpg)",
       "Bash(curl -s -o /dev/null -w \"next/image: %{http_code}\\\\n\" \"http://localhost:3000/_next/image?url=%2Fprogetti%2Fpizzeria-da-salvatore.jpg&w=1080&q=75\")",
       "WebFetch(domain:www.belleepoque1985.com)",
-      "Bash(sips -s format jpeg -s formatOptions 80 --resampleWidth 1600 '/Users/michelecacciapuoti/Desktop/Screenshot 2026-07-15 at 10.52.46.png' --out /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/belle-epoque.jpg)"
+      "Bash(sips -s format jpeg -s formatOptions 80 --resampleWidth 1600 '/Users/michelecacciapuoti/Desktop/Screenshot 2026-07-15 at 10.52.46.png' --out /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/belle-epoque.jpg)",
+      "Bash(gh auth *)",
+      "Bash(brew --version)",
+      "Bash(ssh-keygen -t ed25519 -C \"michelecacciapuotipiccolo@gmail.com\" -f ~/.ssh/id_ed25519 -N \"\" -q)",
+      "Bash(printf \"Host github.com\\\\n  IdentityFile ~/.ssh/id_ed25519\\\\n  AddKeysToAgent yes\\\\n\")",
+      "Bash(chmod 600 ~/.ssh/config)",
+      "Bash(ssh -T -o StrictHostKeyChecking=accept-new -o ConnectTimeout=10 git@github.com)",
+      "Bash(ssh -T -o ConnectTimeout=10 git@github.com)",
+      "WebFetch(domain:sito-personale-five.vercel.app)"
     ]
   }
 }
