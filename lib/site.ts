@@ -1,5 +1,5 @@
-// Dominio da confermare prima del deploy.
-export const siteUrl = "https://michelecacciapuoti.it";
+// URL Vercel attuale; sostituire col dominio definitivo quando sarà registrato.
+export const siteUrl = "https://sito-personale-five.vercel.app";
 
 export const email = "michelecacciapuotipiccolo@gmail.com";
 
