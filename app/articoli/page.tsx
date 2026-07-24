@@ -22,6 +22,7 @@ export default async function PaginaArticoli() {
           <SectionHeading
             etichetta="Articoli"
             titolo="Tutto quello che ho scritto"
+            livello="h1"
           />
           <ElencoArticoli articoli={articoli} />
         </div>

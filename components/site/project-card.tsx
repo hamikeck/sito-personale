@@ -9,7 +9,7 @@ export function ProjectCard({ progetto }: { progetto: Progetto }) {
       href={progetto.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block overflow-hidden rounded-2xl border-2 border-foreground bg-card shadow-brut transition-transform hover:-translate-y-1"
+      className="group block overflow-hidden rounded-2xl border-2 border-foreground bg-card shadow-brut transition-transform hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
     >
       <div className="relative aspect-[8/5] border-b-2 border-foreground">
         <Image

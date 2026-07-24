@@ -6,6 +6,8 @@ export type ArticoloMeta = {
   data: string; // ISO: "YYYY-MM-DD"
   descrizione: string;
   tag: string[];
+  cover?: string; // path sotto public/, es. "/articoli/<slug>/cover.jpg"
+  minutiLettura: number; // calcolato a build time, non va scritto nell'MDX
   bozza?: boolean;
 };
 
