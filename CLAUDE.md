@@ -13,7 +13,7 @@ Sito web portfolio personale. Stack: Next.js 16 (App Router, Turbopack), React 1
 Quando l'utente chiede di sviluppare una nuova funzionalità o implementazione:
 
 1. **Prima di scrivere codice**, crea un documento di progetto che descriva l'implementazione prevista: cosa verrà fatto, come verrà sviluppato, quali file/componenti saranno coinvolti.
-2. Il documento va salvato nella cartella `/docs` con nome `YYYY-MM-DD-nome-funzione.md`.
+2. Il documento va salvato nella cartella `/docs` con nome `YYYY-MM-DD-HH-mm-ss-nome-funzione.md`.
 3. **Verifica sempre la data corrente** (es. con `date`) prima di creare il file, così da usare la data corretta nel nome.
 4. Dopo aver creato il documento, **attendi la conferma esplicita dell'utente** prima di procedere con lo sviluppo.
 

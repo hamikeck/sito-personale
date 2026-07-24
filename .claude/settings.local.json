@@ -58,7 +58,20 @@
       "Bash(chmod 600 ~/.ssh/config)",
       "Bash(ssh -T -o StrictHostKeyChecking=accept-new -o ConnectTimeout=10 git@github.com)",
       "Bash(ssh -T -o ConnectTimeout=10 git@github.com)",
-      "WebFetch(domain:sito-personale-five.vercel.app)"
+      "WebFetch(domain:sito-personale-five.vercel.app)",
+      "Bash(npx shadcn@latest add card badge separator)",
+      "Bash(curl -s http://localhost:3000/articoli/benvenuto)",
+      "Bash(curl -s http://localhost:3000/articoli/articolo-di-prova)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/articoli/articolo-di-prova)",
+      "Skill(claude-in-chrome)",
+      "Bash(rm *)",
+      "Bash(rm -rf prova-articolo prova.zip)",
+      "Bash(mkdir -p prova-articolo/immagini)",
+      "Bash(printf '# Il mio articolo di prova\\\\n\\\\nIntro con una foto:\\\\n\\\\n![Una foto]\\(immagini/foto%%20uno.png\\)\\\\n\\\\nAltra immagine con ./:\\\\n\\\\n![Alt]\\(./immagini/schema.jpg\\)\\\\n\\\\nEsterna, non va toccata: ![x]\\(https://example.com/a.png\\)\\\\n\\\\nMancante: ![m]\\(immagini/non-esiste.png\\)\\\\n')",
+      "Bash(printf 'png')",
+      "Bash(printf 'jpg')",
+      "Bash(node scripts/importa-articolo.mjs /private/tmp/claude-501/-Users-michelecacciapuoti-Desktop-sito-personal/d3a4329f-f580-4572-a4cb-55f3ae9654e2/scratchpad/prova.zip)",
+      "Bash(npx eslint *)"
     ]
   }
 }
