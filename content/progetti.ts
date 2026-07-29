@@ -21,4 +21,18 @@ export const progetti: Progetto[] = [
     url: "https://www.belleepoque1985.com/",
     screenshot: "/progetti/belle-epoque.jpg",
   },
+  {
+    nome: "Planet Gym",
+    descrizione:
+      "Sito per la palestra di Qualiano: tema scuro d'impatto, presentazione di corsi e servizi, prezzi chiari e prenotazione della consulenza gratuita.",
+    url: "https://planet-gym.com",
+    screenshot: "/progetti/planet-gym.jpg",
+  },
+  {
+    nome: "Arturo Cerullo Pizzeria",
+    descrizione:
+      "Sito per la pizzeria napoletana di Qualiano: atmosfera neon, menù integrato, storia e informazioni sul locale, ordini rapidi su Glovo, Just Eat e Deliveroo.",
+    url: "https://www.arturocerullopizzeria.it/",
+    screenshot: "/progetti/arturo-cerullo.jpg",
+  },
 ];

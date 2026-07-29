@@ -9,6 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     { url: siteUrl, lastModified: new Date() },
     { url: `${siteUrl}/articoli`, lastModified: new Date() },
+    { url: `${siteUrl}/progetti`, lastModified: new Date() },
     ...articoli.map((a) => ({
       url: `${siteUrl}/articoli/${a.slug}`,
       lastModified: new Date(a.data),
