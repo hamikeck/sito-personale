@@ -71,7 +71,18 @@
       "Bash(printf 'png')",
       "Bash(printf 'jpg')",
       "Bash(node scripts/importa-articolo.mjs /private/tmp/claude-501/-Users-michelecacciapuoti-Desktop-sito-personal/d3a4329f-f580-4572-a4cb-55f3ae9654e2/scratchpad/prova.zip)",
-      "Bash(npx eslint *)"
+      "Bash(npx eslint *)",
+      "Bash(unzip *)",
+      "Bash(node scripts/importa-articolo.mjs /private/tmp/claude-501/-Users-michelecacciapuoti-Desktop-sito-personal/06863fcc-826e-44eb-8962-aeff24b40ae2/scratchpad/prova-import/ExportBlock-9a898f98-8e4d-400e-a507-af29302a7d72-Part-1.zip)",
+      "Bash(lsof -nP -iTCP:3000 -sTCP:LISTEN)",
+      "Bash(curl *)",
+      "Bash(echo \"URL inesistente: $\\(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/pagina-che-non-esiste\\)\")",
+      "Bash(echo \"Slug articolo inesistente: $\\(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/articoli/slug-inesistente\\)\")",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/*.jpg \"/Users/michelecacciapuoti/Desktop/Screenshot 2026-07-29 at 20.01.12.png\")",
+      "Bash(sips -s format jpeg -s formatOptions 80 -z 902 1600 \"/Users/michelecacciapuoti/Desktop/Screenshot 2026-07-29 at 20.01.12.png\" --out /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/planet-gym.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/planet-gym.jpg)",
+      "Bash(sips -s format jpeg -s formatOptions 80 -z 902 1600 \"/Users/michelecacciapuoti/Downloads/Screenshot 2026-07-29 at 20.25.00.png\" --out /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/arturo-cerullo.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/michelecacciapuoti/Desktop/sito-personal/public/progetti/arturo-cerullo.jpg)"
     ]
   }
 }
