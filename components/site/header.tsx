@@ -5,7 +5,7 @@ import { ThemeToggle } from "@/components/site/theme-toggle";
 const voci = [
   { nome: "Progetti", href: "/progetti" },
   { nome: "Articoli", href: "/articoli" },
-  { nome: "Percorso", href: "/#percorso" },
+  { nome: "Chi sono", href: "/chi-sono" },
   { nome: "Contatti", href: "/#contatti" },
 ];
 
