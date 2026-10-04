@@ -2,11 +2,11 @@ import { Header } from "@/components/site/header";
 import { Hero } from "@/components/home/hero";
 import { SezioneProgetti } from "@/components/home/sezione-progetti";
 import { SezioneArticoli } from "@/components/home/sezione-articoli";
-import { SezionePercorso } from "@/components/home/sezione-percorso";
+import { SezioneVideo } from "@/components/home/sezione-video";
 import { SezioneContatti } from "@/components/home/sezione-contatti";
 
 // L'ordine delle sezioni è una scelta editoriale: per riordinare basta
-// spostare le righe qui sotto (rivedere quando parte il canale YouTube).
+// spostare le righe qui sotto.
 export default function Home() {
   return (
     <>
@@ -15,7 +15,7 @@ export default function Home() {
         <Hero />
         <SezioneProgetti />
         <SezioneArticoli />
-        <SezionePercorso />
+        <SezioneVideo />
         <SezioneContatti />
       </main>
     </>

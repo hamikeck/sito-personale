@@ -1,6 +1,8 @@
 import Image from "next/image";
 import type { MDXComponents } from "mdx/types";
 
+import { YouTube } from "@/components/site/youtube-player";
+
 const components: MDXComponents = {
   // Immagini del corpo: next/image in cornice brand, alt come didascalia.
   // Niente <figure>: MDX mette l'immagine dentro un <p>, dove i block element
@@ -22,6 +24,7 @@ const components: MDXComponents = {
       )}
     </>
   ),
+  YouTube,
 };
 
 export function useMDXComponents(): MDXComponents {

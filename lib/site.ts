@@ -3,6 +3,12 @@ export const siteUrl = "https://sito-personale-five.vercel.app";
 
 export const email = "michelecacciapuotipiccolo@gmail.com";
 
+export const youtube = {
+  url: "https://www.youtube.com/@michele-cacciapuoti",
+  // L'id (non l'@handle) serve per il feed RSS pubblico del canale.
+  channelId: "UCbm4oVUReh7gwwVqxzJQEMg",
+};
+
 export type Social = {
   nome: string;
   url: string;
@@ -27,7 +33,7 @@ export const socials: Social[] = [
   },
   {
     nome: "YouTube",
-    url: "https://www.youtube.com/@michele-cacciapuoti",
+    url: youtube.url,
     icona: "youtube",
   },
 ];

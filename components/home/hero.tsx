@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { buttonVariants } from "@/components/ui/button";
 import { SocialIcon } from "@/components/site/social-icon";
-import { socials } from "@/lib/site";
+import { socials, youtube } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -51,6 +51,17 @@ export function Hero() {
         >
           Leggi il blog
         </Link>
+        <a
+          href={youtube.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            buttonVariants({ variant: "outline", size: "lg" }),
+            "rounded-full border-2 border-foreground font-bold shadow-brut-sm"
+          )}
+        >
+          Guarda i video
+        </a>
       </div>
       <div className="mt-6 flex flex-wrap items-center gap-3">
         {socials.map((social) => (
