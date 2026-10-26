@@ -11,7 +11,7 @@ export function CardInEvidenza({ articolo }: { articolo: ArticoloMeta }) {
       href={`/articoli/${articolo.slug}`}
       className="group block rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
     >
-      <Card className="gap-0 rounded-2xl border-2 border-foreground p-0 shadow-brut ring-0 transition-transform group-hover:-translate-y-1 group-focus-visible:-translate-y-1 md:grid md:grid-cols-[55%_1fr]">
+      <Card className="gap-0 rounded-2xl border-2 border-foreground p-0 premi ring-0 md:grid md:grid-cols-[55%_1fr]">
         <CoverArticolo
           articolo={articolo}
           priority

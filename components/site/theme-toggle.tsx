@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -21,12 +21,17 @@ export function ThemeToggle() {
     () => document.documentElement.classList.contains("dark"),
     () => false
   );
+  // L'icona gira solo dopo un click, non all'idratazione con il tema salvato scuro.
+  const [cliccato, setCliccato] = useState(false);
 
   function toggle() {
     const next = !document.documentElement.classList.contains("dark");
     document.documentElement.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
+    setCliccato(true);
   }
+
+  const giro = cliccato ? "motion-safe:animate-giro" : undefined;
 
   return (
     <Button
@@ -34,9 +39,9 @@ export function ThemeToggle() {
       size="icon"
       onClick={toggle}
       aria-label={dark ? "Passa al tema chiaro" : "Passa al tema scuro"}
-      className="rounded-full border-2 border-foreground shadow-brut-sm"
+      className="premi premi-sm rounded-full border-2 border-foreground active:not-aria-[haspopup]:translate-y-0"
     >
-      {dark ? <Sun /> : <Moon />}
+      {dark ? <Sun className={giro} /> : <Moon className={giro} />}
     </Button>
   );
 }

@@ -15,7 +15,7 @@ export function ArticleCard({ articolo }: { articolo: ArticoloMeta }) {
       href={`/articoli/${articolo.slug}`}
       className="group block h-full rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
     >
-      <Card className="h-full gap-0 rounded-2xl border-2 border-foreground p-0 shadow-brut ring-0 transition-transform group-hover:-translate-y-1 group-focus-visible:-translate-y-1">
+      <Card className="h-full gap-0 rounded-2xl border-2 border-foreground p-0 premi ring-0">
         <CoverArticolo
           articolo={articolo}
           sizes="(min-width: 40rem) 50vw, 100vw"

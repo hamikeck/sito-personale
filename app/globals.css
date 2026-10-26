@@ -51,6 +51,80 @@
   --shadow-brut-sm: 2px 2px 0 0 var(--color-foreground);
 }
 
+/* Animazioni: poche, veloci, solo transform e opacity */
+@theme {
+  --ease-scatto: cubic-bezier(0.23, 1, 0.32, 1);
+  --animate-cursore: cursore 1s steps(1) 4;
+  --animate-cursore-continuo: cursore 1s steps(1) infinite;
+  --animate-saluto: saluto 1.1s ease-in-out 400ms;
+  --animate-saluto-subito: saluto 1.1s ease-in-out;
+  --animate-entra: entra 240ms var(--ease-scatto) both;
+  --animate-dissolvi: dissolvi 240ms var(--ease-scatto) both;
+  --animate-giro: giro 220ms var(--ease-scatto);
+
+  @keyframes cursore {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  @keyframes saluto {
+    0% { transform: rotate(0); }
+    15% { transform: rotate(14deg); }
+    30% { transform: rotate(-8deg); }
+    45% { transform: rotate(14deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0); }
+  }
+  @keyframes entra {
+    from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  }
+  @keyframes dissolvi {
+    from { opacity: 0; }
+  }
+  @keyframes giro {
+    from { opacity: 0; transform: rotate(-90deg) scale(0.6); }
+  }
+}
+
+/* Tasti che si premono: in hover salgono e l'ombra si allunga, premuti affondano
+   sull'ombra. Funziona anche dentro un .group (link che contiene la Card con l'ombra).
+   Usa transform, non translate, per non scontrarsi con active:translate-y-px dei Button. */
+@utility premi {
+  --premi-o: var(--premi-ombra, 3px);
+  box-shadow: var(--premi-o) var(--premi-o) 0 0 var(--color-foreground);
+  transition:
+    transform 160ms var(--ease-scatto),
+    box-shadow 160ms var(--ease-scatto);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    .group:hover & {
+      transform: translate(calc(1px - var(--premi-o)), calc(1px - var(--premi-o)));
+      box-shadow: calc(2 * var(--premi-o) - 1px) calc(2 * var(--premi-o) - 1px) 0 0
+        var(--color-foreground);
+    }
+  }
+  &:focus-visible,
+  .group:focus-visible & {
+    transform: translate(calc(1px - var(--premi-o)), calc(1px - var(--premi-o)));
+    box-shadow: calc(2 * var(--premi-o) - 1px) calc(2 * var(--premi-o) - 1px) 0 0
+      var(--color-foreground);
+  }
+  &:active,
+  .group:active & {
+    transform: translate(var(--premi-o), var(--premi-o));
+    box-shadow: 0 0 0 0 var(--color-foreground);
+    transition-duration: 80ms;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    transform: none !important;
+  }
+}
+
+@utility premi-sm {
+  --premi-ombra: 2px;
+}
+
 :root {
   /* base chiara calda — carta #f4f2ec, inchiostro #22201a */
   --background: oklch(0.9601 0.0092 96);

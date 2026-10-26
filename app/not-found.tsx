@@ -31,7 +31,7 @@ export default function NotFound() {
               href="/"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "rounded-full border-2 border-foreground font-bold shadow-brut-sm"
+                "premi premi-sm rounded-full border-2 border-foreground font-bold active:not-aria-[haspopup]:translate-y-0"
               )}
             >
               Torna alla home
@@ -40,7 +40,7 @@ export default function NotFound() {
               href="/articoli"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
-                "rounded-full border-2 border-foreground font-bold shadow-brut-sm"
+                "premi premi-sm rounded-full border-2 border-foreground font-bold active:not-aria-[haspopup]:translate-y-0"
               )}
             >
               Leggi gli articoli

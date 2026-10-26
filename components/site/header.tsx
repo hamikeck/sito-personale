@@ -13,8 +13,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-foreground bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/" className="font-mono text-lg font-bold">
-          michele<span className="text-primary">_</span>
+        <Link href="/" className="group/logo font-mono text-lg font-bold">
+          michele
+          <span className="inline-block text-primary motion-safe:animate-cursore motion-safe:group-hover/logo:animate-cursore-continuo">
+            _
+          </span>
         </Link>
         <nav className="flex items-center gap-4">
           <ul className="hidden items-center gap-4 text-sm font-medium sm:flex">
