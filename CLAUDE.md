@@ -35,6 +35,7 @@ Quando l'utente chiede di sviluppare una nuova funzionalità o implementazione:
 
 - **Articoli**: un file MDX per articolo in `content/articoli/<slug>.mdx`; lo slug è il nome del file e definisce l'URL. Metadati in testa al file via `export const metadata`: `titolo`, `data` (ISO), `descrizione`, `tag[]`, `cover?` (path immagine), `bozza?` (se `true` l'articolo non compare sul sito). `minutiLettura` è calcolato a build time da `lib/articoli.ts`, non va scritto a mano. Immagini in `public/articoli/<slug>/`, referenziate con sintassi Markdown standard; `mdx-components.tsx` le rende con `next/image` e l'alt diventa didascalia. Pagine generate staticamente (`generateStaticParams` + `dynamicParams = false`). Se manca la `cover`, `components/blog/cover-articolo.tsx` genera un fallback tipografico deterministico dallo slug.
 - **Progetti**: array tipizzato in `content/progetti.ts` (`nome`, `descrizione`, `url`, `screenshot`). **L'ordine dell'array decide tutto**: i primi 2 compaiono in homepage, `/progetti` li mostra tutti. Screenshot in `public/progetti/` come JPG ~1600px in proporzione 8:5.
+- **Frasi dell'hero**: le frasi a macchina da scrivere dopo "A 16 anni" sono in `content/cose-che-faccio.ts` (solo cose concrete già fatte, la prima è la più forte). Le anima `components/home/frase-rotante.tsx`.
 - **Sezioni homepage**: componenti indipendenti in `components/home/`; riordinare le sezioni = spostare una riga in `app/page.tsx` (requisito voluto: l'ordine cambierà quando partirà il canale YouTube).
 
 ## Architettura e convenzioni non ovvie

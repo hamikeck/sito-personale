@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { buttonVariants } from "@/components/ui/button";
 import { SocialIcon } from "@/components/site/social-icon";
+import { FraseRotante } from "@/components/home/frase-rotante";
+import { coseCheFaccio } from "@/content/cose-che-faccio";
 import { socials, youtube } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -26,14 +28,15 @@ export function Hero() {
             </span>
           </h1>
           <p className="font-mono text-lg text-primary sm:text-xl">
-            A 16 anni creo siti web e racconto le mie passioni e la mia crescita
+            <FraseRotante prefisso="A 16 anni" frasi={coseCheFaccio} />
           </p>
         </div>
       </div>
       <p className="mt-6 max-w-xl text-muted-foreground">
-        Questo è il diario pubblico del mio percorso: ogni sito che consegno,
-        ogni esperimento, ogni cosa che imparo finisce qui. Se hai
-        un&apos;attività e ti serve un sito, sei nel posto giusto.
+        Questo è il diario pubblico del mio percorso, dove racconto le mie
+        passioni e la mia crescita: ogni sito che consegno, ogni esperimento,
+        ogni cosa che imparo finisce qui. Se hai un&apos;attività e ti serve un
+        sito, sei nel posto giusto.
       </p>
       <div className="mt-8 flex flex-wrap gap-3">
         <Link
