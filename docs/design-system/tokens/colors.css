@@ -1,0 +1,71 @@
+/* Fonte: app/globals.css di hamikeck/sito-personale (oklch) — esadecimali equivalenti */
+:root {
+  /* palette base */
+  --terracotta: #E25D39;          /* oklch(0.6432 0.1741 36) */
+  --terracotta-dark-mode: #EE7350;/* oklch(0.7051 0.1637 40) */
+  --ambra: #F1B967;               /* oklch(0.8194 0.1183 75) */
+  --crema: #F3F2EB;               /* carta, oklch(0.9601 0.0092 96) */
+  --crema-muted: #E9E6DC;         /* oklch(0.9245 0.0132 92) */
+  --inchiostro: #22201A;          /* oklch(0.2439 0.0111 92) */
+  --pietra: #6B6658;              /* muted-foreground, oklch(0.5104 0.0223 89) */
+  --bianco: #FFFFFF;
+  --marrone: #221E17;             /* dark bg, oklch(0.2192 0.0125 75) */
+  --marrone-card: #2D2920;        /* oklch(0.2685 0.0148 75) */
+  --marrone-muted: #37322A;       /* oklch(0.3128 0.0158 75) */
+  --sabbia: #E8E3D7;              /* dark fg, oklch(0.9245 0.0146 85) */
+  --sabbia-muted: #A9A291;        /* oklch(0.7042 0.0221 80) */
+  --rosso: #E7000B;               /* destructive oklch(0.577 0.245 27.325) */
+
+  /* semantici (tema chiaro) */
+  --background: var(--crema);
+  --foreground: var(--inchiostro);
+  --card: var(--bianco);
+  --card-foreground: var(--inchiostro);
+  --primary: var(--terracotta);
+  --primary-foreground: #FBFAF6;
+  --secondary: var(--ambra);
+  --secondary-foreground: var(--inchiostro);
+  --muted: var(--crema-muted);
+  --muted-foreground: var(--pietra);
+  --accent: var(--crema-muted);
+  --accent-foreground: var(--inchiostro);
+  --destructive: var(--rosso);
+  --border: var(--inchiostro);
+  --input: var(--inchiostro);
+  --ring: var(--terracotta);
+
+  /* YouTube: testo sopra il video — card scure semi-opache */
+  --overlay-surface: rgba(34, 32, 26, 0.88);
+  --overlay-surface-strong: rgba(34, 32, 26, 0.96);
+  --overlay-foreground: var(--crema);
+  --overlay-border: var(--crema);
+  --overlay-scrim: linear-gradient(180deg, rgba(34,32,26,0) 0%, rgba(34,32,26,0.7) 100%); /* @kind color */
+
+  /* alias */
+  --text-body: var(--foreground);
+  --text-muted: var(--muted-foreground);
+  --text-accent: var(--primary);
+  --surface-page: var(--background);
+  --surface-card: var(--card);
+  --surface-inverse: var(--foreground);
+  --text-inverse: var(--background);
+}
+
+.dark {
+  --background: var(--marrone);
+  --foreground: var(--sabbia);
+  --card: var(--marrone-card);
+  --card-foreground: var(--sabbia);
+  --primary: var(--terracotta-dark-mode);
+  --primary-foreground: var(--marrone);
+  --secondary: var(--ambra);
+  --secondary-foreground: var(--marrone);
+  --muted: var(--marrone-muted);
+  --muted-foreground: var(--sabbia-muted);
+  --accent: var(--marrone-muted);
+  --accent-foreground: var(--sabbia);
+  --destructive: #FF6467;
+  --border: var(--sabbia);
+  --input: var(--sabbia);
+  --ring: var(--terracotta-dark-mode);
+}

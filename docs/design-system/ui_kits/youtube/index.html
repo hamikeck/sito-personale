@@ -1,0 +1,89 @@
+<!-- @dsCard group="YouTube" viewport="1280x860" name="Kit grafiche canale" subtitle="Miniatura, sovraimpressioni in sequenza, frase chiave, finale, banner" -->
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>michele_ — grafiche YouTube (UI kit)</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--marrone);color:var(--sabbia);min-height:100vh}</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="stage.jsx"></script>
+<script type="text/babel">
+const YT = window.MicheleDesignSystem_402387;
+
+const PASSI = [
+  { id: "capitolo", nome: "01 · Capitolo" },
+  { id: "app", nome: "02 · Scheda app" },
+  { id: "pillole", nome: "03 · Etichette" },
+  { id: "frase", nome: "04 · Frase chiave" },
+  { id: "fine", nome: "05 · Finale" },
+];
+
+function Video({ passo, fondo }) {
+  const { ChapterTitle, AppCard, PillLabel, KeyPhrase, EndScreen } = YT;
+  if (passo === "frase") return <KeyPhrase frase="Il telefono non è il problema. Lo è come lo usiamo." evidenza="come lo usiamo" />;
+  if (passo === "fine") return <EndScreen foto="../../assets/michele.jpg" />;
+  return (
+    <Fotogramma fondo={fondo}>
+      {passo === "capitolo" && <ChapterTitle numero={1} titolo="Perché lo controllo?" style={{ position: "absolute", left: 96, bottom: 120 }} />}
+      {passo === "app" && <AppCard nome="Instagram" dettaglio="## bloccata dopo 5 aperture" icona="instagram" style={{ position: "absolute", right: 96, top: 96 }} />}
+      {passo === "pillole" && (
+        <div style={{ position: "absolute", left: 96, bottom: 110, display: "flex", gap: 28 }}>
+          <PillLabel tono="terracotta">3/5 aperture</PillLabel>
+          <PillLabel tono="scura" punto>streak: 0 giorni</PillLabel>
+        </div>
+      )}
+    </Fotogramma>
+  );
+}
+
+function App() {
+  const { Thumbnail, ChannelBanner, Logo } = YT;
+  const [vista, setVista] = React.useState(() => localStorage.getItem("yt-kit-vista") || "video");
+  const [passo, setPasso] = React.useState("capitolo");
+  const [fondo, setFondo] = React.useState("scuro");
+  React.useEffect(() => localStorage.setItem("yt-kit-vista", vista), [vista]);
+  const tab = (id, label) => (
+    <button onClick={() => setVista(id)} style={{ fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 700, padding: "6px 14px", borderRadius: 999, border: "2px solid var(--sabbia)", background: vista === id ? "var(--terracotta)" : "transparent", color: vista === id ? "var(--crema)" : "var(--sabbia)", cursor: "pointer" }}>{label}</button>
+  );
+  return (
+    <div style={{ maxWidth: 1240, margin: "0 auto", padding: "24px 20px 40px", display: "grid", gap: 18 }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <Logo size={20} color="var(--sabbia)" />
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--sabbia-muted)" }}>## grafiche canale</span>
+        </div>
+        <div style={{ display: "flex", gap: 8 }}>{tab("miniatura", "miniatura")}{tab("video", "video")}{tab("banner", "banner")}</div>
+      </div>
+      {vista === "miniatura" && (
+        <Stage w={1920} h={1080}>
+          <Thumbnail simbolo="?" testo="Perché?" tessere={[{ icona: "instagram", x: 1480, y: 120, size: 280, rotate: 6, locked: true }, { icona: "youtube", x: 1380, y: 560, size: 250, rotate: -5, locked: true }]} />
+        </Stage>
+      )}
+      {vista === "video" && (
+        <>
+          <Stage w={1920} h={1080}><Video passo={passo} fondo={fondo} /></Stage>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+            {PASSI.map((p) => (
+              <button key={p.id} onClick={() => setPasso(p.id)} style={{ fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 700, padding: "8px 14px", borderRadius: 12, border: "2px solid var(--sabbia)", background: passo === p.id ? "var(--crema)" : "var(--marrone-card)", color: passo === p.id ? "var(--inchiostro)" : "var(--sabbia)", boxShadow: passo === p.id ? "3px 3px 0 0 var(--terracotta)" : "none", cursor: "pointer" }}>{p.nome}</button>
+            ))}
+            <span style={{ flex: 1 }}></span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--sabbia-muted)" }}>fotogramma:</span>
+            {["scuro", "chiaro"].map((f) => <button key={f} onClick={() => setFondo(f)} style={{ fontFamily: "var(--font-mono)", fontSize: 12, padding: "6px 12px", borderRadius: 999, border: "2px solid var(--sabbia)", background: fondo === f ? "var(--ambra)" : "transparent", color: fondo === f ? "var(--inchiostro)" : "var(--sabbia)", cursor: "pointer" }}>{f}</button>)}
+          </div>
+        </>
+      )}
+      {vista === "banner" && <Stage w={2048} h={1152}><ChannelBanner guide /></Stage>}
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

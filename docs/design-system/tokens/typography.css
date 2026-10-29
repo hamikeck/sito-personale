@@ -1,0 +1,31 @@
+:root {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-heading: var(--font-sans);
+
+  /* scala Tailwind usata dal sito */
+  --text-xs: 0.75rem;   --leading-xs: 1rem;
+  --text-sm: 0.875rem;  --leading-sm: 1.25rem;
+  --text-base: 1rem;    --leading-base: 1.5rem;
+  --text-lg: 1.125rem;  --leading-lg: 1.75rem;
+  --text-xl: 1.25rem;   --leading-xl: 1.75rem;
+  --text-2xl: 1.5rem;   --leading-2xl: 2rem;
+  --text-3xl: 1.875rem; --leading-3xl: 2.25rem;
+  --text-4xl: 2.25rem;  --leading-4xl: 2.5rem;
+  --text-5xl: 3rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 6rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --tracking-tight: -0.025em;
+
+  /* scala video 1920×1080 */
+  --yt-text-label: 34px;
+  --yt-text-body: 44px;
+  --yt-text-title: 88px;
+  --yt-text-display: 150px;
+  --yt-text-symbol: 720px;
+}
